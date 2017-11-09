@@ -1,5 +1,4 @@
 package lab5;
-
 /**
  * Created by Eugene on 09-Nov-17.
  */
