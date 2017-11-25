@@ -13,7 +13,11 @@ public class QuadrilateralTest {
 		/* Set up two squares,
 		 * two rectangles that are not squares,
 		 * and a quad that is neither a rectangle nor a square. */
-		square1 = new Quadrilateral(new Point(2, 3), new Point(4, 7), new Point(8, 5), new Point(6, 1));
+		square1 = new Quadrilateral(
+				new Point(2, 3),
+				new Point(4, 7),
+				 new Point(8, 5),
+				new Point(6, 1));
 		square2 = new Quadrilateral(new Point(-1, -1), new Point(-1, 1), new Point(1, 1), new Point(1, -1));
 		rectangle1 = new Quadrilateral(new Point(4, 2), new Point(3, 4), new Point(9, 7), new Point(10, 5));
 		rectangle2 = new Quadrilateral(new Point(-2, -1), new Point(-2, 1), new Point(2, 1), new Point(2, -1));
