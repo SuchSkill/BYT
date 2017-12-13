@@ -2,7 +2,7 @@ package lab8.edu.ncsu.monopoly.gui;
 
 import javax.swing.JOptionPane;
 
-import edu.ncsu.monopoly.*;
+import lab8.edu.ncsu.monopoly.*;
 
 public class Main {
 

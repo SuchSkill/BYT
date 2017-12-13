@@ -1,8 +1,6 @@
 package lab8.edu.ncsu.monopoly.gui;
 
-import edu.ncsu.monopoly.Cell;
-import edu.ncsu.monopoly.Player;
-import edu.ncsu.monopoly.UtilityCell;
+import lab8.edu.ncsu.monopoly.*;
 
 public class UtilCellInfoFormatter implements CellInfoFormatter {
 

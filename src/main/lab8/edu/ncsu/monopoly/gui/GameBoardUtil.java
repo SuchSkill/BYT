@@ -4,7 +4,7 @@ import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.ncsu.monopoly.GameBoard;
+import lab8.edu.ncsu.monopoly.GameBoard;
 
 public class GameBoardUtil {
     

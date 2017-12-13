@@ -5,7 +5,7 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
-import edu.ncsu.monopoly.gui.GameBoardUtil;
+import lab8.edu.ncsu.monopoly.gui.GameBoardUtil;
 
 public class GameboardCreationTest extends TestCase{
 	

@@ -1,8 +1,9 @@
 package lab8.edu.ncsu.monopoly.gui;
 
+import lab8.edu.ncsu.monopoly.*;
+
 import java.util.Hashtable;
 
-import edu.ncsu.monopoly.*;
 
 public class InfoFormatter {
     static Hashtable cellInfoFormatters = null;

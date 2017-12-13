@@ -6,8 +6,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import edu.ncsu.monopoly.RespondDialog;
-import edu.ncsu.monopoly.TradeDeal;
+import lab8.edu.ncsu.monopoly.RespondDialog;
+import lab8.edu.ncsu.monopoly.TradeDeal;
 
 
 public class GUIRespondDialog extends JDialog implements RespondDialog {

@@ -13,9 +13,9 @@ import javax.swing.*;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 
-import edu.ncsu.monopoly.*;
-import edu.ncsu.monopoly.TradeDeal;
-import edu.ncsu.monopoly.TradeDialog;
+import lab8.edu.ncsu.monopoly.*;
+import lab8.edu.ncsu.monopoly.TradeDeal;
+import lab8.edu.ncsu.monopoly.TradeDialog;
 
 public class GUITradeDialog extends JDialog implements TradeDialog {
     private JButton btnOK, btnCancel;

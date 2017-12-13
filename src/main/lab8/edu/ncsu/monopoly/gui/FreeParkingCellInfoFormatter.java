@@ -1,6 +1,6 @@
 package lab8.edu.ncsu.monopoly.gui;
 
-import edu.ncsu.monopoly.Cell;
+import lab8.edu.ncsu.monopoly.Cell;
 
 public class FreeParkingCellInfoFormatter implements CellInfoFormatter {
     

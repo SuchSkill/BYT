@@ -16,12 +16,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
-import edu.ncsu.monopoly.*;
-import edu.ncsu.monopoly.Cell;
-import edu.ncsu.monopoly.GameBoard;
-import edu.ncsu.monopoly.GameMaster;
-import edu.ncsu.monopoly.MonopolyGUI;
-import edu.ncsu.monopoly.Player;
+import lab8.edu.ncsu.monopoly.*;
 
 public class MainWindow extends JFrame implements MonopolyGUI{
 	JPanel eastPanel = new JPanel();

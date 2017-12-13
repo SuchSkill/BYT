@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 
-import edu.ncsu.monopoly.*;
+import lab8.edu.ncsu.monopoly.*;
 
 public class GUICell extends JPanel {
 

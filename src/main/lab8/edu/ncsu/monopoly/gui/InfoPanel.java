@@ -4,7 +4,7 @@ import java.awt.GridLayout;
 
 import javax.swing.JPanel;
 
-import edu.ncsu.monopoly.GameMaster;
+import lab8.edu.ncsu.monopoly.GameMaster;
 
 public class InfoPanel extends JPanel {
 	public void displayInfo() {

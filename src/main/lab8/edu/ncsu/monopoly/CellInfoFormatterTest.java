@@ -1,7 +1,7 @@
 package lab8.edu.ncsu.monopoly;
 
-import edu.ncsu.monopoly.gui.GoCellInfoFormatter;
-import edu.ncsu.monopoly.gui.InfoFormatter;
+import lab8.edu.ncsu.monopoly.gui.GoCellInfoFormatter;
+import lab8.edu.ncsu.monopoly.gui.InfoFormatter;
 import junit.framework.TestCase;
 
 public class CellInfoFormatterTest extends TestCase {
