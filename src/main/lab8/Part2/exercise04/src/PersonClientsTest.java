@@ -13,11 +13,16 @@ public class PersonClientsTest {
 
     private Person bobSmith;
     private Person jennyJJones;
+    private NameOrder FML;
+    private NameOrder LFM;
 
     @Before
     public void inti() {
         bobSmith = new Person("Smith", "Bob", null);
         jennyJJones = new Person("Jones", "Jenny", "J");
+        FML = NameOrder.FML;
+        LFM = NameOrder.LFM;
+
     }
 
     @Test
@@ -34,28 +39,28 @@ public class PersonClientsTest {
     @Test
     public void testClientDisplayJenny() throws IOException {
         StringWriter out = new StringWriter();
-        Client3.writePerson(out, jennyJJones);
+        PersonWriter.writePerson(out, jennyJJones, LFM);
         assertEquals("Jones, Jenny J", out.toString());
     }
 
     @Test
     public void testClientDisplayBob() throws IOException {
         StringWriter out = new StringWriter();
-        Client3.writePerson(out, bobSmith);
+        PersonWriter.writePerson(out, bobSmith, LFM);
         assertEquals("Smith, Bob", out.toString());
     }
 
     @Test
-    public void testClientWriter() throws IOException {
+    public void testPersonWriter() throws IOException {
         StringWriter out = new StringWriter();
-        Client1.writePerson(out, jennyJJones);
+        PersonWriter.writePerson(out, jennyJJones, FML);
         assertEquals("Jenny J Jones", out.toString());
     }
 
     @Test
-    public void testClientBobSmith() throws IOException {
+    public void testPersonBobSmithFML() throws IOException {
         StringWriter out = new StringWriter();
-        Client1.writePerson(out, bobSmith);
+        PersonWriter.writePerson(out, bobSmith, FML);
         assertEquals("Bob Smith", out.toString());
     }
 }
