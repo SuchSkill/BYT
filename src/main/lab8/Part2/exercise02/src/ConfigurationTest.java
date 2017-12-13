@@ -42,7 +42,6 @@ public class ConfigurationTest{
 	public void testInvalidDeparture() throws IOException {
 		processBadInput("interval = 10\nduration = 100\ndeparture = 199\n");
 	}
-	@Test
 	private void processBadInput(String data) throws IOException {
 		Properties input = loadInput(data);
 
@@ -56,7 +55,6 @@ public class ConfigurationTest{
 
 		assertTrue(failed);
 	}
-	@Test
 	private Properties loadInput(String data) throws IOException {
 		InputStream is = new StringBufferInputStream(data);
 
