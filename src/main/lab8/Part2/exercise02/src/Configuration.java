@@ -10,38 +10,55 @@ public class Configuration {
     public int departure;
 
     public void load(Properties props) throws ConfigurationException {
-        String valueString = props.getProperty("interval");
-        int value = Integer.parseInt(valueString);
+        interval = readInterval(props);
 
-        if (value <= 0) {
-            throw new ConfigurationException("monitor interval > 0");
-        }
-        interval = value;
-
-        valueString = props.getProperty("duration");
-        if (valueString == null) {
-            throw new ConfigurationException("duration");
-        }
-        value = Integer.parseInt(valueString);
-        if (value <= 0) {
-            throw new ConfigurationException("duration > 0");
-        }
-        if ((value % interval) != 0) {
-            throw new ConfigurationException("duration % interval");
-        }
+        int value = readDuration(props);
+        isNegative(value);
+        isMultipleOfInterval(value);
         duration = value;
 
-        valueString = props.getProperty("departure");
+        value = readDeparture(props);
+        isNegative(value);
+        isMultipleOfInterval(value);
+        departure = value;
+    }
+
+    private int readDeparture(Properties props) throws ConfigurationException {
+        int value;
+        String valueString = props.getProperty("departure");
         if (valueString == null) {
             throw new ConfigurationException("departure offset");
         }
         value = Integer.parseInt(valueString);
-        if (value <= 0) {
-            throw new ConfigurationException("departure > 0");
-        }
+        return value;
+    }
+
+    private void isMultipleOfInterval(int value) throws ConfigurationException {
         if ((value % interval) != 0) {
-            throw new ConfigurationException("departure % interval");
+            throw new ConfigurationException("duration % interval");
         }
-        departure = value;
+    }
+
+    private void isNegative(int value) throws ConfigurationException {
+        if (value <= 0) {
+            throw new ConfigurationException("duration > 0");
+        }
+    }
+
+    private int readDuration(Properties props) throws ConfigurationException {
+        String valueString = props.getProperty("duration");
+        if (valueString == null) {
+            throw new ConfigurationException("duration");
+        }
+        return Integer.parseInt(valueString);
+    }
+
+    private int readInterval(Properties props) throws ConfigurationException {
+        String valueString = props.getProperty("interval");
+        int value = Integer.parseInt(valueString);
+        if (value <= 0) {
+            throw new ConfigurationException("monitor interval > 0");
+        }
+        return value;
     }
 }
