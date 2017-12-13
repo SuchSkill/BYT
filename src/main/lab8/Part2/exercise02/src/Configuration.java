@@ -13,9 +13,6 @@ public class Configuration {
         String valueString = props.getProperty("interval");
         int value = Integer.parseInt(valueString);
 
-        if (valueString == null) {
-            throw new ConfigurationException("monitor interval");
-        }
         if (value <= 0) {
             throw new ConfigurationException("monitor interval > 0");
         }
