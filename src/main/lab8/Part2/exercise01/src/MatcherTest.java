@@ -1,5 +1,6 @@
 package lab8.Part2.exercise01.src;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -13,7 +14,7 @@ public class MatcherTest {
 	private int clipLimit;
 	private int delta;
 
-	@BeforeClass
+	@Before
 	public void init(){
 		matcher = new Matcher();
 		expected = new int[] { 10, 50, 30, 98 };
