@@ -10,12 +10,12 @@ public class Expression {
 
 	private int constant;
 
-	public Expression(int constant) {
+	Expression(int constant) {
 		this.op = 'c';
 		this.constant = constant;
 	}
 
-	public Expression(char op, Expression left, Expression right) {
+	Expression(char op, Expression left, Expression right) {
 		this.op = op;
 		this.left = left;
 		this.right = right;
