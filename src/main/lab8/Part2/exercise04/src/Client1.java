@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Client1 {
 
-	public static void printPerson(Writer out, Person person) throws IOException {
+	public static void writePerson(Writer out, Person person) throws IOException {
 		out.write(person.first);
 		out.write(" ");
 		if (person.middle != null) {

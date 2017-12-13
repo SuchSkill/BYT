@@ -3,7 +3,6 @@ package lab8.Part2.exercise04.src;// The Person class has multiple clients, but 
 // client classes.
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.*;
@@ -22,41 +21,41 @@ public class PersonClientsTest {
     }
 
     @Test
-    public void testClientsToStringBobAndJenny() throws IOException {
-        assertEquals("Smith, Bob", Client4.toString(bobSmith));
-        assertEquals("Jones, Jenny J", Client4.toString(jennyJJones));
+    public void testClientFromat() {
+        assertEquals("Smith, Bob", PersonPrinter.toString(bobSmith));
+        assertEquals("Jones, Jenny J", PersonPrinter.toString(jennyJJones));
     }
+    @Test
+    public void testClientsToStringBobAndJenny() throws IOException {
+        assertEquals("Smith, Bob", PersonPrinter.toString(bobSmith));
+        assertEquals("Jones, Jenny J", PersonPrinter.toString(jennyJJones));
+    }
+
     @Test
     public void testClientDisplayJenny() throws IOException {
         StringWriter out = new StringWriter();
-        Client3.display(out, jennyJJones);
+        Client3.writePerson(out, jennyJJones);
         assertEquals("Jones, Jenny J", out.toString());
     }
 
     @Test
     public void testClientDisplayBob() throws IOException {
         StringWriter out = new StringWriter();
-        Client3.display(out, bobSmith);
+        Client3.writePerson(out, bobSmith);
         assertEquals("Smith, Bob", out.toString());
-    }
-
-    @Test
-    public void testClientFromat() {
-        assertEquals("Smith, Bob", Client2.formatPerson(bobSmith));
-        assertEquals("Jones, Jenny J", Client2.formatPerson(jennyJJones));
     }
 
     @Test
     public void testClientWriter() throws IOException {
         StringWriter out = new StringWriter();
-        Client1.printPerson(out, jennyJJones);
+        Client1.writePerson(out, jennyJJones);
         assertEquals("Jenny J Jones", out.toString());
     }
 
     @Test
     public void testClientBobSmith() throws IOException {
         StringWriter out = new StringWriter();
-        Client1.printPerson(out, bobSmith);
+        Client1.writePerson(out, bobSmith);
         assertEquals("Bob Smith", out.toString());
     }
 }
